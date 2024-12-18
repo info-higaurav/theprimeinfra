@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +64,8 @@ export default function Header() {
 
                     {/* Desktop Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <motion.button 
+                       <NavLink to="/sign-in">
+                       <motion.button 
                             whileHover={{ scale: 1.05 }}
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -72,6 +74,7 @@ export default function Header() {
                         >
                             Sign In
                         </motion.button>
+                       </NavLink>
                         <motion.button 
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -124,12 +127,14 @@ export default function Header() {
                                 transition={{ delay: 0.5 }}
                                 className="pt-2 space-y-2"
                             >
+                                <NavLink to="/sign-in">
                                 <motion.button 
                                     whileTap={{ scale: 0.95 }}
                                     className="block w-full px-4 py-2 text-gray-200 bg-transparent hover:text-amber-400 transition-colors"
                                 >
                                     Sign In
                                 </motion.button>
+                                </NavLink>
                                 <motion.button 
                                     whileTap={{ scale: 0.95 }}
                                     className="block w-full px-4 py-2 bg-amber-500 text-slate-900 rounded-md hover:bg-amber-400 transition-colors shadow-md font-semibold"
