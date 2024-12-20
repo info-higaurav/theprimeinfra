@@ -7,6 +7,7 @@ import About from "../about";
 import ContactUs from "../contact-us";
 import Testimonials from "../testimonials";
 import TeamMember from "../team-member";
+import Footer from "../footer";
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
             <ContactUs />
             <Testimonials />
             <TeamMember />
+            <Footer />
         </>
     );
 }
