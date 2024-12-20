@@ -5,6 +5,7 @@ import HowItWorks from "../how-it-works";
 import Pricing from "../pricing";
 import About from "../about";
 import ContactUs from "../contact-us";
+import Testimonials from "../testimonials";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <Pricing />
             <About />
             <ContactUs />
+            <Testimonials />
         </>
     );
 }
